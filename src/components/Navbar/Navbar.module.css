@@ -1,0 +1,178 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(252, 248, 251, 0.85); /* #fcf8fb with transparency */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(193, 198, 213, 0.4); /* subtle outline-variant */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  max-width: 1600px; /* Match Hero hierarchy */
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 6vw; /* Match Hero padding */
+}
+
+.brand {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b1b1d;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Generous gap from screenshot */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  position: relative;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #727784; /* Inactive color */
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #1b1b1d;
+}
+
+.active {
+  color: #004e9f; /* Primary blue */
+  font-weight: 700;
+}
+
+.underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #004e9f; /* Solid blue underline */
+  border-radius: 2px;
+}
+
+.resumeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #004e9f; /* Bright primary blue */
+  color: #ffffff;
+  padding: 8px 24px; /* Tighter vertical padding to match the pill shape */
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 78, 159, 0.15); /* Subtle baseline shadow */
+}
+
+.resumeBtn:hover {
+  background-color: #003f82;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(0, 78, 159, 0.25);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-2);
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.barOpen1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.barOpen2 {
+  opacity: 0;
+}
+
+.barOpen3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  overflow: hidden;
+  background-color: rgba(9, 9, 11, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--content-padding) var(--space-6);
+  gap: var(--space-1);
+}
+
+.mobileLink {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobileLink:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary);
+}
+
+.mobileLinkActive {
+  color: var(--color-text-primary);
+  background-color: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.mobileResumeBtn {
+  margin-top: var(--space-2);
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .resumeBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
