@@ -1,6 +1,8 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   background-color: rgba(252, 248, 251, 0.85); /* #fcf8fb with transparency */
   backdrop-filter: blur(16px);

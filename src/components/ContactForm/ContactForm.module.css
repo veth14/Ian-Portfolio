@@ -1,65 +1,89 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: 24px;
 }
 
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-5);
+  gap: 20px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 10px;
 }
 
 .label {
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text-secondary);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1b1b1d;
+  letter-spacing: 0.02em;
 }
 
 .input,
 .textarea {
   width: 100%;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  font-size: var(--text-sm);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg);
-  transition: all var(--transition-fast);
-  outline: none;
+  background-color: #f4f4f6;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 14px;
+  color: #1b1b1d;
+  transition: all 0.2s ease;
 }
 
 .input:focus,
 .textarea:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px var(--color-accent-light);
+  background-color: #ffffff;
+  border-color: #004e9f;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 78, 159, 0.05);
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: var(--color-text-tertiary);
+  color: #a0a4b0;
 }
 
 .textarea {
-  resize: vertical;
-  min-height: 120px;
+  resize: none;
 }
 
 .submitBtn {
+  margin-top: 12px;
   width: 100%;
-  padding: var(--space-4) var(--space-8);
-  font-size: var(--text-base);
-  border-radius: var(--radius-full);
-  margin-top: var(--space-2);
+  height: 60px;
+  background-color: #004e9f;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-@media (max-width: 480px) {
+.submitBtn:hover {
+  background-color: #003f82;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 78, 159, 0.2);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
   .row {
     grid-template-columns: 1fr;
   }

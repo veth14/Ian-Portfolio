@@ -12,43 +12,44 @@ export interface Certification {
   title: string;
   issuer: string;
   date: string;
-  icon: string;
   credentialUrl: string;
   verified: boolean;
+  skills: string[];
+  imageUrl: string;
 }
 
 export const skillCategories: SkillCategory[] = [
   {
     id: "core",
     title: "Core Technologies",
-    icon: "⚡",
-    color: "#2563EB",
-    bgColor: "#EFF6FF",
+    icon: "terminal",
+    color: "#004e9f",
+    bgColor: "#d7e3ff",
     skills: ["TypeScript", "React.js", "Node.js", "PostgreSQL", "GraphQL"],
   },
   {
     id: "devops",
     title: "Architecture & DevOps",
-    icon: "🚀",
-    color: "#D97706",
-    bgColor: "#FEF3C7",
-    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Nginx"],
+    icon: "cloud",
+    color: "#004e9f",
+    bgColor: "#d7e3ff",
+    skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Redis"],
   },
   {
     id: "design",
     title: "Design & UX",
-    icon: "🎨",
-    color: "#16A34A",
-    bgColor: "#DCFCE7",
+    icon: "palette",
+    color: "#004e9f",
+    bgColor: "#d7e3ff",
     skills: ["Figma", "Tailwind CSS", "Framer Motion", "Design Systems", "Accessibility (a11y)"],
   },
   {
     id: "focus",
     title: "Current Focus",
-    icon: "🎯",
-    color: "#7C3AED",
-    bgColor: "#EDE9FE",
-    skills: ["AWS Solutions", "Micro-frontends"],
+    icon: "graduation",
+    color: "#004e9f",
+    bgColor: "#d7e3ff",
+    skills: ["AWS Solutions Architect"],
   },
 ];
 
@@ -58,38 +59,41 @@ export const certifications: Certification[] = [
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
     date: "Oct 2023",
-    icon: "☁️",
     credentialUrl: "#",
     verified: true,
+    skills: ["Cloud Economics", "Shared Responsibility", "VPC & EC2", "AWS S3", "IAM"],
+    imageUrl: "/images/project-budget.jpg",
   },
   {
     id: "google-data",
     title: "Google Data Analytics Professional",
     issuer: "Google / Coursera",
     date: "Mar 2023",
-    icon: "📊",
     credentialUrl: "#",
     verified: true,
+    skills: ["Data Cleaning", "R Programming", "SQL", "Tableau", "Data Ethics"],
+    imageUrl: "/images/project-event.jpg",
   },
   {
     id: "react-dev",
     title: "Advanced React Developer",
     issuer: "Meta",
     date: "Jan 2024",
-    icon: "⚛️",
     credentialUrl: "#",
     verified: true,
+    skills: ["Custom Hooks", "Performance Optimization", "Zustand", "Next.js 14", "Testing"],
+    imageUrl: "/images/project-inventory.jpg",
   },
 ];
 
 export const profileBio = {
   name: "Ian Angelo Valmores",
-  shortName: "Ian Angelo",
+  shortName: "Ian Angelo Valmores",
   title: "Full-Stack Developer",
   bio: "I am a full-stack developer with a passion for crafting elegant, user-centric digital experiences. My approach blends deep technical expertise with an acute eye for design, ensuring every product is not only functional but visually compelling and intuitive.",
   specialization:
     "Specializing in building scalable, accessible, and high-performance web applications that drive user engagement.",
-  location: "San Francisco, CA",
-  currentFocus: "Deepening expertise in Distributed Systems and Web Accessibility (WCAG).",
-  currentFocusTags: ["AWS Solutions", "Micro-frontends"],
+  location: "Quezon City, Philippines",
+  currentFocus: "Deepening expertise in Distributed Systems and WebAssembly (Wasm).",
+  currentFocusTags: ["AWS Solutions Architect"],
 };

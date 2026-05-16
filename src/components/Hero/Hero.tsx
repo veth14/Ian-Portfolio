@@ -2,26 +2,38 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations";
+import SplitText from "@/components/SplitText/SplitText";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
-        <div className={styles.left}>
+        <motion.div
+          className={styles.left}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <div className={styles.badge}>
             <span className={styles.badgeDot}></span>
-            3rd Year BSIT Student
+            4th Year BSIT Student
           </div>
 
           <h1 className={styles.heading}>
-            Hi, I'm <span className={styles.name}>Ian.</span>
+            <SplitText text="Hi, I'm" />{" "}
+            <SplitText text="Ian." className={styles.name} />
             <br />
-            <span className={styles.role}>Developer & Designer</span>
+            <SplitText text="Developer & Designer" className={styles.role} delay={0.2} />
           </h1>
 
           <p className={styles.subtitle}>
-            I bridge the gap between technical functionality and beautiful design. Currently building responsive web applications and exploring modern UI/UX principles to create seamless digital experiences.
+            <SplitText
+              text="I bridge the gap between technical functionality and beautiful design. Currently building responsive web applications and exploring modern UI/UX principles to create seamless digital experiences."
+              delay={0.4}
+            />
           </p>
 
           <div className={styles.ctas}>
@@ -55,13 +67,18 @@ export default function Hero() {
             </div>
             <div className={styles.metaText}><strong>Frontend</strong> focused.<br />Always learning.</div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className={styles.right}>
+        <motion.div
+          className={styles.right}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <div className={styles.imageFrame}>
             <div className={styles.imageInner}>
               <Image
-                src="/images/LYA.jpg"
+                src="/images/pictureMe3D.png"
                 alt="Ian Angelo Valmores"
                 width={520}
                 height={720}
@@ -70,7 +87,7 @@ export default function Hero() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

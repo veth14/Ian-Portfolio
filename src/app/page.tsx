@@ -7,40 +7,13 @@ import ContactSection from "@/components/ContactSection/ContactSection";
 
 export default function HomePage() {
   return (
-    <>
-      <section className="section full-bleed-bg" style={{ padding: 0 }}>
-        <Hero />
-      </section>
-
-      <section className="section">
-        <div className="section-inner container">
-          <SkillsSection />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-inner container">
-          <ExperienceSection />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-inner container">
-          <ProjectsSection />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-inner container">
-          <CertificationsSection />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-inner container">
-          <ContactSection />
-        </div>
-      </section>
-    </>
+    <main>
+      <Hero />
+      <SkillsSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <CertificationsSection />
+      <ContactSection />
+    </main>
   );
 }

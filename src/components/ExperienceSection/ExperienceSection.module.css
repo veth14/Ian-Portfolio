@@ -10,8 +10,8 @@
   padding: 0 6vw;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+.timelineGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Gaps handled by the card margins and timeline line */
 }

@@ -1,33 +1,25 @@
 .header {
-  margin-bottom: var(--space-12);
+  margin-bottom: 40px;
 }
 
 .title {
-  font-size: var(--text-5xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-  line-height: var(--leading-tight);
-  margin-bottom: var(--space-4);
-  letter-spacing: -0.02em;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #1b1b1d;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
 }
 
 .subtitle {
-  font-size: var(--text-lg);
-  color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-  max-width: 600px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 16px;
+  color: #727784;
+  line-height: 1.6;
+  max-width: 60ch;
 }
 
 .highlight {
-  color: var(--color-accent);
-}
-
-@media (max-width: 768px) {
-  .title {
-    font-size: var(--text-4xl);
-  }
-
-  .subtitle {
-    font-size: var(--text-base);
-  }
+  color: #004e9f;
 }
