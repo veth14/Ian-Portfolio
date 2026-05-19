@@ -15,7 +15,8 @@ export default function CertificationCard({ certification }: CertificationCardPr
         <Image
           src={certification.imageUrl}
           alt={certification.title}
-          fill
+          width={1200}
+          height={800}
           className={styles.certImage}
           sizes="(max-width: 768px) 100vw, 30vw"
           priority

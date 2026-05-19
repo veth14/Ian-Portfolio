@@ -100,7 +100,7 @@ export default function ProjectCard({ project, index, onClick, isGalleryMode = f
         <div className={styles.keyLearning}>
           <div className={styles.keyLearningHeader}>
             <div className={styles.keyLearningIcon}>{getLearningIcon()}</div>
-            <span className={styles.keyLearningLabel}>Key Learning</span>
+            <span className={styles.keyLearningLabel}>Problem Solved</span>
           </div>
           <p className={styles.keyLearningText}>{project.keyLearning}</p>
         </div>

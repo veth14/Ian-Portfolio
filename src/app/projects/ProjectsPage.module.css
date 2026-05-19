@@ -116,10 +116,12 @@
   /* Balanced vertical padding */
   scroll-snap-align: start;
   box-sizing: border-box;
+  grid-template-areas: "image info";
 }
 
 .reverse {
   grid-template-columns: 0.8fr 1.2fr;
+  grid-template-areas: "info image";
 }
 
 /* Image Section */
@@ -128,6 +130,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  grid-area: image;
 }
 
 .imageWrapper {
@@ -164,6 +167,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  grid-area: info;
 }
 
 .categoryLabel {
@@ -287,15 +291,10 @@
   .showcaseItem,
   .reverse {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "info";
     gap: 48px;
-  }
-
-  .reverse .imageContainer {
-    order: 1;
-  }
-
-  .reverse .infoContainer {
-    order: 2;
   }
 }
 

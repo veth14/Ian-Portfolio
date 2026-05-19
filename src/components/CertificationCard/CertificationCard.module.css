@@ -20,14 +20,20 @@
 .imageSection {
   position: relative;
   width: 100%;
-  height: 220px;
-  background-color: #f3f0f2;
+  background-color: transparent;
   overflow: hidden;
+  padding: 0;
 }
 
 .certImage {
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: auto;
+  display: block;
   transition: transform 0.5s ease;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .card:hover .certImage {

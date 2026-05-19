@@ -79,7 +79,7 @@ export default function ProjectList() {
 
               <div className={styles.detailSection}>
                 <h4 className={styles.detailTitle}>
-                  <SplitText text="Key Insights" delay={0.4} />
+                  <SplitText text="Problem Solved" delay={0.4} />
                 </h4>
                 <div className={styles.learningWrapper}>
                    <SplitText 

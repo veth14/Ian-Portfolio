@@ -80,7 +80,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     <p className={styles.description}>{project.description}</p>
                     
                     <div className={styles.section}>
-                      <h4 className={styles.sectionTitle}>Key Learning</h4>
+                      <h4 className={styles.sectionTitle}>Problem Solved</h4>
                       <div className={styles.learningCard}>
                          <p className={styles.learningText}>{project.keyLearning}</p>
                       </div>
