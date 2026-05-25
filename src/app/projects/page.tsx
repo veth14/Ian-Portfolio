@@ -1,5 +1,6 @@
 import SplitText from "@/components/SplitText/SplitText";
 import ProjectList from "./ProjectList";
+import ScrollIndicator from "./ScrollIndicator";
 import styles from "./ProjectsPage.module.css";
 
 export const metadata = {
@@ -24,12 +25,7 @@ export default function ProjectsPage() {
               delay={0.6}
             />
           </p>
-          <div className={styles.scrollDown}>
-            <span>Scroll to explore</span>
-            <div className={styles.mouse}>
-              <div className={styles.wheel}></div>
-            </div>
-          </div>
+          <ScrollIndicator />
         </header>
 
         {/* The ProjectList handles the grid and the modal interactivity */}
